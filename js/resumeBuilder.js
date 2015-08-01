@@ -1,39 +1,41 @@
 var bio = {
-	"name" : "name",
-	"role" : "role",
+	"name" : "Heidi Slojewski",
+	"role" : "Interaction Design",
 	"contacts" : {
-		"mobile" : "mobile",
-		"email" : "email",
-		"twitter" : "twitter",
-		"github" : "github",
-		"blog" : "blog",
+		"mobile" : "(123) 456-7890",
+		"email" : "heidi.slojewski@gmail.com",
+		"twitter" : "heiidski",
+		"github" : "hslojewski",
+		"blog" : "HeidiSlojewski.com",
 		"location" : "Los Angeles, CA"
 		},
-	"images" : "images/fry.jpg",
-	"welcomeMessage" : "welcome Message",
-	"skills" : ["skill", "skill", "skill", "skill"]
+	"images" : "images/biopic.jpg",
+	"welcomeMessage" : "Product Ops for Disney Interactive Media and Human-Computer Interaction Masters Student",
+	"skills" : ["Prototypes", "Wireframes", "Site Maps", "HTML/CSS and Javascript/jQuery"]
 };
 
 var education = {
   "schools": [
     {
-	  "name": "name",
-	  "location": "Los Angeles, CA",
-	  "degree": "degree",
-	  "major": "major",
-	  "dates" : 2014,
+	  "name": "DePaul University",
+	  "location": "Chicago, IL",
+	  "degree": "MS",
+	  "major": "Human-Computer Interaction",
+	  "dates" : "2014-2016",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
     },
     {
-	  "name": "name",
+	  "name": "Loyola Marymount University",
 	  "location": "Los Angeles, CA",
-	  "degree": "degree",
-	  "major": "major",
-	  "dates" : 2014,
-    }
+	  "degree": "BS",
+	  "major": "Applied Information Management Systems",
+	  "dates" : "2010-2013",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
+   }
   ],
   "onlineCourses": [
     {
-	  "title": "title",
+	  "title": "Front End Web Development",
 	  "school": "Udacity",
 	  "dates" : 2015,
 	  "url": "http://udacity.com"
@@ -45,18 +47,32 @@ var education = {
 var work = {
   "jobs": [
     {
-      "employer" : "employer",
-      "title" : "title",
-      "location" : "Los Angeles, CA",
-      "dates" : "date - date",
-      "description" : "description"
+      "employer" : "Disney Interactive",
+      "title" : "Sr. Product Operations Coordinator",
+      "location" : "Glendale, CA",
+      "dates" : "2014 - Present",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
     },
     {
-      "employer" : "employer",
-      "title" : "title",
-      "location" : "Los Angeles, CA",
-      "dates" : "date - date",
-      "description" : "description"
+      "employer" : "Disney Interactive",
+      "title" : "Product Development Intern",
+      "location" : "Glendale, CA",
+      "dates" : "2013 - 2014",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
+    },
+    {
+      "employer" : "Nickelodeon Games Group",
+      "title" : "Premium Analytics Intern",
+      "location" : "Glendale, CA",
+      "dates" : "Summer 2012",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
+    },
+    {
+      "employer" : "Loyola Marymount University",
+      "title" : "Web Editor and Administrative Clerk",
+      "location" : "Westchester, CA",
+      "dates" : "2011 - 2013",
+      "description" : "Bacon ipsum dolor amet andouille bresaola pork chop beef turkey chuck. Ground round pig alcatra, turkey tongue tri-tip chuck ball tip beef. Sausage pork tri-tip, chuck salami corned beef beef ham hock ham."
     }
   ]
 }
@@ -64,27 +80,27 @@ var work = {
 var projects = {
   "projects": [
 	{
-	  "title" : "title",
-	  "dates" : "date to date",
-	  "description" : "description",
+	  "title" : "Portfolio",
+	  "dates" : "2015",
+	  "description" : "Udacity Project utilizing HTML and CSS",
 	  "images" : [
 	  	"images/197x148.gif",
 	  	"images/197x148.gif"
 	  ]
 	},
 	{
-	  "title" : "title",
-	  "dates" : "date to date",
-	  "description" : "description",
+	  "title" : "Interactive Resume",
+	  "dates" : "2015",
+	  "description" : "Udacity Project utlizing HTML, CSS, and Javascript",
 	  "images" : [
 	  	"images/197x148.gif",
 	  	"images/197x148.gif"
 	  ]
 	},
 	{
-	  "title" : "title",
-	  "dates" : "date to date",
-	  "description" : "description",
+	  "title" : "Project 3",
+	  "dates" : "2015",
+	  "description" : "Udacity Project",
 	  "images" : [
 	  	"images/197x148.gif",
 	  	"images/197x148.gif"
@@ -108,31 +124,36 @@ bio.display = function() {
 
 	$("#header").append(formattedName);
 	$("#header").append(formattedRole);
+
 	$("#header").append(formattedMobile);
 	$("#header").append(formattedEmail);
 	$("#header").append(formattedTwitter);
 	$("#header").append(formattedGithub);
 	$("#header").append(formattedBlog);
 	$("#header").append(formattedLocation);
-	$("#header").append(formattedWelcomeMsg);
+
 	$("#header").append(formattedBioPic);
+
+	$("#header").append(formattedWelcomeMsg);
+
+	if(bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+		
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%",bio.skills[1])
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%",bio.skills[2])
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%",bio.skills[3])
+		$("#skills").append(formattedSkill);
+		}
 }
 
 bio.display();
 
 bio.skills.display = function() {
-	if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
 	
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[1])
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[2])
-	$("#skills").append(formattedSkill);
-	formattedSkill = HTMLskills.replace("%data%",bio.skills[3])
-	$("#skills").append(formattedSkill);
-	}
 }
 
 bio.skills.display();
@@ -141,15 +162,17 @@ work.display = function() {
 	for(job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 		var formattedEmployerTitle = formattedEmployer + " " + formattedTitle;
 		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
 		$(".work-entry:last").append(
-			formattedEmployerTitle);
+			formattedTitle);
+		$(".work-entry:last").append(
+			formattedEmployer);
 		$(".work-entry:last").append(
 			formattedDate);
 		$(".work-entry:last").append(
@@ -170,6 +193,7 @@ education.display = function() {
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		var formattedDescription = HTMLschoolDescription.replace("%data%", education.schools[school].description);
 
 		$(".education-entry:last").append(
 			formattedName);
@@ -178,13 +202,15 @@ education.display = function() {
 		$(".education-entry:last").append(
 			formattedDates);
 		$(".education-entry:last").append(
+			formattedDegree);
+		$(".education-entry:last").append(
 			formattedMajor);
 		$(".education-entry:last").append(
-			formattedDegree);
+			formattedDescription);
 	}
 
 	for(course in education.onlineCourses) {
-		$("#education").append(HTMLonlineCourses);
+		//$("#education").append(HTMLonlineCourses);
 
 		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
@@ -226,7 +252,7 @@ function inName(name) {
 	return name[0] + " " + name[1];
 }
 
-$("#main").append(internationalizeButton);
+// $("#main").append(internationalizeButton);
 
 $("#map-div").append(googleMap);
 
