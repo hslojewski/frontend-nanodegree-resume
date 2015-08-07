@@ -143,6 +143,14 @@ a {
   text-align: center;
 }
 
+#menu li {
+    display: inline-block;
+}
+
+#menu a:hover {
+    color: #000000;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -192,6 +200,7 @@ span {
 
 #lets-connect {
   text-align: center;
+  padding-bottom: 2%;
 }
 
 /* Media queries to handle various device widths */
