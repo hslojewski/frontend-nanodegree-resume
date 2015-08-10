@@ -6,6 +6,7 @@ var bio = {
 		"email" : "heidi.slojewski@gmail.com",
 		"twitter" : "heiidski",
 		"github" : "hslojewski",
+		"linkedin" : "heidislojewski",
 		"blog" : "HeidiSlojewski.com",
 		"location" : "Los Angeles, CA"
 		},
@@ -120,6 +121,7 @@ bio.display = function() {
 	var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
 	var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
 	var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
+	var formattedLinkedin = HTMLlinkedin.replace(data, bio.contacts.linkedin);
 	var formattedBlog = HTMLblog.replace(data, bio.contacts.blog);
 	var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
 	var formattedBioPic = HTMLbioPic.replace(data, bio.images);
@@ -139,7 +141,8 @@ bio.display = function() {
 		formattedSkill = HTMLskills.replace(data,bio.skills[3])
 		$("#skills").append(formattedSkill);
 		}
-};
+	$footer.append(formattedMobile,formattedEmail,formattedTwitter,formattedGithub,formattedLinkedin,formattedBlog);
+}
 
 bio.display();
 
@@ -159,27 +162,26 @@ bio.display();
 // 	}
 // };
 
-work.jobs.forEach(function(job) {
+work.display = function() {
 	$("#workExperience").append(HTMLworkStart);
 
-	var len = work.jobs.length;
+	work.jobs.forEach(function(job) {
 
-	var formattedTitle = HTMLworkTitle.replace(data, job.title);
-	var formattedEmployer = HTMLworkEmployer.replace(data, job.employer);
-	var formattedEmployerTitle = formattedEmployer + " " + formattedTitle;
-	var formattedLocation = HTMLworkLocation.replace(data, job.location);
-	var formattedDate = HTMLworkDates.replace(data, job.dates);
-	var formattedDescription = HTMLworkDescription.replace(data, job.description);
+		var len = work.jobs.length;
 
-//	for (var item in job) {
+		var formattedTitle = HTMLworkTitle.replace(data, job.title);
+		var formattedEmployer = HTMLworkEmployer.replace(data, job.employer);
+		var formattedEmployerTitle = formattedEmployer + " " + formattedTitle;
+		var formattedLocation = HTMLworkLocation.replace(data, job.location);
+		var formattedDate = HTMLworkDates.replace(data, job.dates);
+		var formattedDescription = HTMLworkDescription.replace(data, job.description);
 
-	for (var i = 0; i < len; i++) {		
 		$(".work-entry").append(formattedTitle,formattedEmployer,formattedDate,formattedLocation,formattedDescription);
-	}
-});
+	})
+}
 
 
-//work.display();
+work.display();
 
 education.display = function() {
 	for(var school in education.schools) {
@@ -204,7 +206,7 @@ education.display = function() {
 
 		$(".education-entry:last").append(formattedOnlineTitle,formattedOnlineSchool,formattedOnlineDates,formattedOnlineURL);
 	}
-};
+}
 
 education.display();
 
@@ -216,20 +218,7 @@ function locationizer(work_obj) {
 			locationArray.push(newLocation);
 	}
 	return locationArray;
-};
-
-//console.log(locationizer(work));
-
-// function inName(name) {
-// 	name = name.trim().split(" ");
-// 	console.log(name);
-// 	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-// 	name[1] = name[1].toUpperCase();
-
-// 	return name[0] + " " + name[1];
-// }
-
-// $("#main").append(internationalizeButton);
+}
 
 $("#map-div").append(googleMap);
 
@@ -250,18 +239,6 @@ projects.display = function() {
 			}
 		}
 	}
-};
+}
 
 projects.display();
-
-footerContacts.display = function() {
-	var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
-	var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
-	var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
-	var formattedBlog = HTMLblog.replace(data, bio.contacts.blog);
-
-	$footer.append(formattedMobile,formattedEmail,formattedTwitter,formattedGithub,formattedBlog);
-};
-
-footerContacts.display();
